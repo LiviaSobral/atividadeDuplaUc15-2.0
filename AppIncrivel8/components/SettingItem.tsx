@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Switch } from 'react-native'
+import React, { useState } from 'react'
 
 export default function SettingItem() {
+const [active, setActive] = useState<boolean>(false)
   return (
     <View>
-      <Text>SettingItem</Text>
+      <Text>Modo Escuro {active ? "Ativado" : "Desativado"}</Text>
+      <Switch value={active} onValueChange={setActive} trackColor={{false: '#ccc', true:'#666'}} thumbColor={active ? '#fff' : '#333'}/>
     </View>
   )
 }

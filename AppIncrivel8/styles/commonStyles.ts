@@ -7,4 +7,8 @@ export const commonStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text:{
+    fontSize: 18,
+    fontWeight: 300
+  }
 });

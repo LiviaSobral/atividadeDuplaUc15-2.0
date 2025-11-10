@@ -10,15 +10,15 @@ export interface StackParams extends ParamListBase{
 
 export interface HomeScreenProps {
     navigation: NativeStackNavigationProp<StackParams,"Home">,
-    routes:RouteProp<StackParams, "Home">
+    route:RouteProp<StackParams, "Home">
 }
 
 export interface SettingsScreenProps {
     navigation: NativeStackNavigationProp<StackParams,"Settings">,
-    routes:RouteProp<StackParams, "Settings">
+    route:RouteProp<StackParams, "Settings">
 }
 
 export interface ProfileScreenProps {
     navigation: NativeStackNavigationProp<StackParams,"Profile">,
-    routes:RouteProp<StackParams, "Profile">
+    route:RouteProp<StackParams, "Profile">
 }

@@ -12,7 +12,6 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <Provider>
           <StackNavigator/>
-          <TabNavigator/>
         </Provider>
       </SafeAreaView>
     </SafeAreaProvider>

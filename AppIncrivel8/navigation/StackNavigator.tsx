@@ -1,19 +1,15 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { StackParams } from '../interfaces/NavigationTypes';
-import tabNavigator from './TabNavigator';
+import TabNavigator from './TabNavigator';
+import EditProfileScreen from '../screens/EditProfileScreen';
 
-const Stack = createNativeStackNavigator<StackParams>();
+const Stack = createStackNavigator<StackParams>();
 
 export default function StackNavigator(){
     return (
-        <NavigationContainer>
-         <Stack.Navigator initialRouteName="Home">
-         <Stack.Screen name="Home" component={} />
-         <Stack.Screen name="Profile" component={} />
-         <Stack.Screen name='Settings' component={}/>
-         <Stack.Screen name="Tabs" component={tabNavigator} options={{headerShown:false}}/>
+         <Stack.Navigator>
+         <Stack.Screen name="Tabs" component={TabNavigator} options={{headerShown:false}}/>
+         <Stack.Screen name="Profile" component={EditProfileScreen} />
        </Stack.Navigator>
-     </NavigationContainer>
     )
 }

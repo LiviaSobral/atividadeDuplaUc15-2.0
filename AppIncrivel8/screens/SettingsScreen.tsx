@@ -2,17 +2,17 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { use } from '../context/ThemeContext'
 import {DarkModeButton, Notifications,Exit} from '../components/SettingItem'
+import { SettingsScreenProps } from '../interfaces/NavigationTypes'
+import { commonStyles as styles } from '../styles/commonStyles'
 
-export default function SettingsScreen() {
+export default function SettingsScreen({ navigation }: SettingsScreenProps) {
   const {darkTheme} = use()
 
   return (
-    <View>
+    <View style={styles.container}>
       <DarkModeButton/>
       <Notifications/>
       <Exit/>
     </View>
   )
 }
-
-const styles = StyleSheet.create({})

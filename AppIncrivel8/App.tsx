@@ -5,16 +5,19 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import StackNavigator from './navigation/StackNavigator';
 import { Provider } from './context/ThemeContext';
 import TabNavigator from './navigation/TabNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <SafeAreaView style={styles.container}>
-        <Provider>
-          <StackNavigator/>
-        </Provider>
-      </SafeAreaView>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <SafeAreaProvider>
+        <SafeAreaView style={styles.container}>
+          <Provider>
+           <StackNavigator/>
+         </Provider>
+        </SafeAreaView>
+      </SafeAreaProvider>
+    </NavigationContainer>
   );
 }
 

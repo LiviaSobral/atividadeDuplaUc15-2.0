@@ -1,23 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native'
 import { commonStyles as styles} from './styles/commonStyles'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import StackNavigator from './navigation/StackNavigator';
 import { Provider } from './context/ThemeContext';
-import TabNavigator from './navigation/TabNavigator';
 import { NavigationContainer } from '@react-navigation/native';
+import HomeScreen from './screens/HomeScreen';
 
 export default function App() {
   return (
-    <NavigationContainer>
       <SafeAreaProvider>
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={{flex:1}}>
           <Provider>
            <StackNavigator/>
-         </Provider>
+          </Provider>
         </SafeAreaView>
       </SafeAreaProvider>
-    </NavigationContainer>
+    
   );
 }
 

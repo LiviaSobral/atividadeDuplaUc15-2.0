@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
 import React from 'react'
 import { use } from '../context/ThemeContext'
 import {DarkModeButton, Notifications,Exit} from '../components/SettingItem'
@@ -9,7 +9,7 @@ export default function SettingsScreen({ navigation }: SettingsScreenProps) {
   const {darkTheme} = use()
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, {backgroundColor: darkTheme ? "#333" : "#fff"}]}>
       <DarkModeButton/>
       <Notifications/>
       <Exit/>

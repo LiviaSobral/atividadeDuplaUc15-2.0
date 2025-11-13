@@ -3,14 +3,13 @@ import { RouteProp, ParamListBase } from '@react-navigation/native';
 import { User } from './UserInterface';
 
 export interface StackParams extends ParamListBase{
-    Home: {user:User},
+    Home: undefined,
     Settings: undefined,
-    Profile: {user:User}
+    Profile: {user:User, setUser:React.Dispatch<React.SetStateAction<User>>}
 }
 
 export interface HomeScreenProps {
-    navigation: NativeStackNavigationProp<StackParams,"Home">,
-    route:RouteProp<StackParams, "Home">
+    navigation: NativeStackNavigationProp<StackParams,"Home">
 }
 
 export interface SettingsScreenProps {

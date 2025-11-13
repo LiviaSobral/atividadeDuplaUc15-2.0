@@ -6,17 +6,16 @@ import { commonStyles as styles } from '../styles/commonStyles'
 import { use } from '../context/ThemeContext';
 
 export default function EditProfileScreen({ navigation, route }: ProfileScreenProps) {
-  let { user } = route.params;
+  const { user,setUser } = route.params; 
   let user2:User = {name:user.name, email:user.email, cidade:user.cidade, estado:user.estado}
   const {darkTheme} = use()
   return (
     <View style={[styles.container, {backgroundColor: darkTheme ? "#333" : "#fff"}]}>
-      <TextInput style={styles.imput} defaultValue={user2.name} onChangeText={(text) =>{user2.name = text}}/>
-      <TextInput style={styles.imput} defaultValue={user2.email} onChangeText={(text) =>{user2.email = text}}/>
-      <TextInput style={styles.imput} defaultValue={user2.cidade} onChangeText={(text) =>{user2.cidade = text}}/>
-      <TextInput style={styles.imput} defaultValue={user2.estado} onChangeText={(text) =>{user2.estado = text}}/>
-      <Button title='Salvar e voltar' onPress={() => navigation.navigate('Home', {user:{name:user2.name, email:user2.email,cidade:user2.cidade,estado:user2.estado}})}/>
-      <Button title='Voltar' onPress={() => navigation.navigate('Home',{user})}/>
+      <TextInput style={styles.imput} defaultValue={user.name} onChangeText={(text) =>{user2.name = text}}/>
+      <TextInput style={styles.imput} defaultValue={user.email} onChangeText={(text) =>{user2.email = text}}/>
+      <TextInput style={styles.imput} defaultValue={user.cidade} onChangeText={(text) =>{user2.cidade = text}}/>
+      <TextInput style={styles.imput} defaultValue={user.estado} onChangeText={(text) =>{user2.estado = text}}/>
+      <Button title='Salvar e voltar' onPress={() => {setUser(user2), navigation.navigate('Home')}}/>
     </View>
   )
 }

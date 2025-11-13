@@ -18,7 +18,7 @@ export default function EditProfileScreen({
   };
   const { darkTheme } = use();
   return (
-    <View style={[  styles.container, { backgroundColor: darkTheme ? "#535353ff" : "#a7cdeb" }, ]}>
+    <View style={[  styles.container, { backgroundColor: darkTheme ? "#535353ff" : "#bfd7e9ff" }, ]}>
       <TextInput style={styles.imput} defaultValue={user.name} onChangeText={(text) =>{user2.name = text}}/>
       <TextInput style={styles.imput} defaultValue={user.email} onChangeText={(text) =>{user2.email = text}}/>
       <TextInput style={styles.imput} defaultValue={user.cidade} onChangeText={(text) =>{user2.cidade = text}}/>

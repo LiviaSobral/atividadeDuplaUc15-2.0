@@ -9,7 +9,7 @@ export default function SettingsScreen({ navigation }: SettingsScreenProps) {
   const {darkTheme} = use()
 
   return (
-    <View style={[styles.container, {backgroundColor: darkTheme ? "#535353ff" : "#a7cdeb"}]}>
+    <View style={[styles.container, {backgroundColor: darkTheme ? "#535353ff" : "#bfd7e9ff"}]}>
       <DarkModeButton/>
       <Notifications/>
       <Exit/>

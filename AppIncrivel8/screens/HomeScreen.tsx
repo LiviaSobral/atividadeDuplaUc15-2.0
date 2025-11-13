@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation }: HomeScreenProps) {
     <View
       style={[
         styles.container,
-        { backgroundColor: darkTheme ? "#535353ff" : "#a7cdeb" },
+        { backgroundColor: darkTheme ? "#535353ff" : "#bfd7e9ff" },
       ]}
     >
       <UserCard user={user} />

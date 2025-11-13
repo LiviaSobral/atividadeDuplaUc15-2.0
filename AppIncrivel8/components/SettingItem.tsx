@@ -6,7 +6,7 @@ import { use } from '../context/ThemeContext'
 export function DarkModeButton() {
 const {darkTheme, setDarkTheme} = use()
   return (
-    <View style={[styles.smallContainer, {backgroundColor: darkTheme ? "#333" : "#fff"}]}>
+    <View style={[styles.smallContainer, {backgroundColor: darkTheme ? "#535353ff" : "#a7cdeb"}]}>
       <Text style={[styles.text, {color: darkTheme? "white":"black"}]}>Modo Escuro {darkTheme ? "Ativado" : "Desativado"}</Text>
       <Switch value={darkTheme} onValueChange={setDarkTheme} trackColor={{false: '#521713', true:'#21822a'}} thumbColor={darkTheme ? '#2bb539' : '#b5352b'}/>
     </View>

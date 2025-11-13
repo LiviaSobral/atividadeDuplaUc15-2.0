@@ -10,11 +10,11 @@ const Tab = createBottomTabNavigator<StackParams>();
 
 export default function TabNavigator(){
   const {darkTheme} = use()
-  let color = "#333"
-  {darkTheme ? color="#333" : color="#fff"}
+  let color = "#4d4d4dff"
+  {darkTheme ? color="#4d4d4dff" : color="#a7cdeb"}
     return(
        <Tab.Navigator screenOptions={{ headerShown: false, tabBarActiveTintColor:"#FF6B00", tabBarActiveBackgroundColor:`${color}`,tabBarInactiveBackgroundColor:`${color}`}}>
-         <Tab.Screen name="Home" component={HomeScreen} />
+         <Tab.Screen name="Home" component={HomeScreen}/>
          <Tab.Screen name="Settings" component={SettingsScreen} />
          <Tab.Screen name="Profile" component={EditProfileScreen} />
        </Tab.Navigator>

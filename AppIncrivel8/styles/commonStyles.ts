@@ -12,7 +12,7 @@ export const commonStyles = StyleSheet.create({
     gap:10
   },
   btn:{
-    backgroundColor:"#4146cc",
+    backgroundColor:"#3e47c5ff",
     borderRadius:10,
     padding:10,
     margin:10
@@ -28,7 +28,7 @@ export const commonStyles = StyleSheet.create({
   },
   imput:{
     width:300,
-    backgroundColor:"gray",
+    backgroundColor:"#8097b4ff",
     margin:5
   }
 });
